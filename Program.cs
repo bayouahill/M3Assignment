@@ -4,5 +4,22 @@
 
 using M3Assignment;
 
+FoodItem fi = new FoodItem();
+
+string foodItem = "";
+
 Console.WriteLine("Welcome to the Food Item Manager!");
-Console.WriteLine("Adding or Deleting Food?")
+Console.WriteLine("Press 1 if you want to add an item, press 0 if you want to delete an item.");
+string addDelete = Console.ReadLine();
+if (addDelete == "1")
+{
+    fi.AddFoodItem();
+}
+else
+{
+    fi.DeleteFoodItem();
+}
+
+//foodItem = Console.ReadLine();
+
+//Would it be optimal to write an if statement here?
