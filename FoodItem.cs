@@ -6,16 +6,22 @@ namespace M3Assignment
 {
     internal class FoodItem
     {
-        public void AddFoodItem(string itemName)
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public int Quantity { get; set; }
+        public DateTime ExpirationDate { get; set; }
+
+        public FoodItem(string name, string category, int quantity, DateTime expirationDate)
         {
-            // Implementation for adding a food item
-            Console.WriteLine($"Food item '{itemName}' added.");
+            Name = name;
+            Category = category;
+            Quantity = quantity;
+            ExpirationDate = expirationDate;
         }
 
-        public void DeleteFoodItem(string itemName)
+        public override string ToString()
         {
-            // Implementation for deleting a food item
-            Console.WriteLine($"Food item '{itemName}' deleted.");
+            return $"{Name} | {Category} | Qty: {Quantity} | Expires: {ExpirationDate.ToShortDateString()}";
         }
     }
 }
